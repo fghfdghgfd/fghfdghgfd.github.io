@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/* Existing CSS */
+:root {
+    --background-color: rgb(5, 10, 24);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: rgb(116, 112, 131);
+    --highlight-color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    font-weight: 400;
+    color: var(--text-color); /* Applied --text-color variable */
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-brand img {
+    width: 65px;
+    height: 65px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 0px; /* Adjusted gap value */
+}
+
+.nav-link {
+    color: var(--text-color); /* Applied --text-color variable */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color);
+}
+
+#nav-logo-section>a>img {
+            width: 65px;
+            height: 65px;
+        }
+
+#widget-container {
+    width: 100%;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div id="nav-logo-section" style="margin-right: 10px;">
+            <a href="index.html" class="nav-link">
+                <img src="https://lh6.googleusercontent.com/BNqYwfyWiccyaL72udvMc9NIpFYtuujUqiiOlLx9EsKyIE2w3DpOfrgfKlgejwxS4_HH2ca70WuxUGC6F3shlYCsUcGQefWahGrq8P-iMSzG7sVsGW6GdvpgpFax_XCWvA=w404" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div id="nav-link-section" class="nav-section">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="proxy.html" class="nav-link">Proxy</a>
+            <a href="games.html" class="nav-link">Games</a>
+            <a href="apps.html" class="nav-link">Apps</a>
+            <a href="chat.html" class="nav-link">Chat</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+        </div>
+    </nav>
+    <div id="widget-container">
+        <widgetbot server="1180580931350823002" channel="1182193885171167272" class="set"></widgetbot>
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    </div>
+</body>
+
+</html>
