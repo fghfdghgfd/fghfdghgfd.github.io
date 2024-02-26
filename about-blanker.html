@@ -3,6 +3,81 @@
 <head>
     <title>About-Blanker</title>
     <style>
+     /* Existing CSS */
+:root {
+    --background-color: rgb(5, 10, 24);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: rgb(116, 112, 131);
+    --highlight-color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    font-weight: 400;
+    color: var(--text-color); /* Applied --text-color variable */
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 0px; /* Adjusted gap value */
+}
+
+.nav-link {
+    color: var(--text-color); /* Applied --text-color variable */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color);
+}
+
+#nav-logo-section>a>img {
+            width: 65px;
+            height: 65px;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -86,6 +161,29 @@
             background-color: #111;
         }
     </style>
+        </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div id="nav-logo-section" style="margin-right: 10px;">
+            <a href="index.html" class="nav-link">
+                <img src="https://lh6.googleusercontent.com/BNqYwfyWiccyaL72udvMc9NIpFYtuujUqiiOlLx9EsKyIE2w3DpOfrgfKlgejwxS4_HH2ca70WuxUGC6F3shlYCsUcGQefWahGrq8P-iMSzG7sVsGW6GdvpgpFax_XCWvA=w404" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div id="nav-link-section" class="nav-section">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="proxy.html" class="nav-link">Proxy</a>
+            <a href="games.html" class="nav-link">Games</a>
+            <a href="apps.html" class="nav-link">Apps</a>
+            <a href="chat.html" class="nav-link">Chat</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+        </div>
+    </nav>
     <link rel="icon" href="https://i.ibb.co/pJyqvzx/favicon.png" type="image/png">
     <link rel="manifest" href='{"name": "Classes","short_name": "Classes","start_url": ".","display": "standalone","background_color": "#000000","theme_color": "#63de00","icons": [{"src": "https://i.ibb.co/pJyqvzx/icon-192.png","sizes": "192x192","type": "image/png"},{"src": "https://i.ibb.co/pJyqvzx/icon-512.png","sizes": "512x512","type": "image/png"}]}' />
 </head>
