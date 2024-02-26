@@ -23,7 +23,14 @@
     <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
     <style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/* Existing CSS */
+:root {
+    --background-color: rgb(5, 10, 24);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: rgb(116, 112, 131);
+    --highlight-color: rgb(255, 255, 255);
+}
         :root {
           overflow-x: hidden;
         }
@@ -33,19 +40,44 @@
             bottom: 100;
             left: 0;
             right: 0;
-            background-color: #1e1e1e;
+            background-color: var(--background-color);
             padding: 10px;
             z-index: 1000;
         }
 
         .navbar-brand {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             margin-right: 10px;
         }
+
+       .nav-item.nav-link.active {
+          color: var(--text-color); /* Apply --text-color variable */
+          text-decoration: none;
+          font-size: 1.2rem;
+          padding: 0 10px;
+       }
+
+      .nav-item.nav-link.active:hover {
+          color: var(--highlight-color); /* Apply --highlight-color variable on hover */
+       }
+
+body, html {
+  height: 100vh;
+}
+
+h1 {
+  width: 100vw;
+  font-family: monospace;
+  color: limegreen; /* Correct spelling for 'color' */
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
         body, html {
     height: 100vh;
-  }
+      }
 
   #list {
     margin-bottom: 30px;
@@ -132,20 +164,19 @@
 <body>
  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.html">
-        <img src="foil.png" alt="our logo" style="width: 100%; height: 100%; object-fit: contain;">
+        <img src="https://lh6.googleusercontent.com/BNqYwfyWiccyaL72udvMc9NIpFYtuujUqiiOlLx9EsKyIE2w3DpOfrgfKlgejwxS4_HH2ca70WuxUGC6F3shlYCsUcGQefWahGrq8P-iMSzG7sVsGW6GdvpgpFax_XCWvA=w404" alt="our logo" style="width: 100%; height: 100%; object-fit: contain;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse ms-auto navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto" style="gap: 20px; display: flex !important; justify-content: center; align-items: center;">
-        <a style="color: #fff;" class="nav-item nav-link active" href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home <span class="sr-only">(current)</span></a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="proxy.html"><i class="fa-solid fa-window-maximize"></i> Proxy</a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="apps.html"><i class="fa-solid fa-rocket"></i> Apps</a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="chatroom.html"><i class="fa-solid fa-comment-dots"></i> Chatroom</a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-        <a style="color: #fff;" class="nav-item nav-link active" href="about.html"><i class="fa-solid fa-question"></i> About</i></a>
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="proxy.html" class="nav-item nav-link active">Proxy</a>
+        <a href="games.html" class="nav-item nav-link active">Games</a>
+        <a href="apps.html" class="nav-item nav-link active">Apps</a>
+        <a href="chat.html" class="nav-item nav-link active">Chat</a>
+        <a href="settings.html" class="nav-item nav-link active">Settings</a>
       </div>
     </div>
   </nav> 
