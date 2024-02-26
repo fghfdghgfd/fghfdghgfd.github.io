@@ -30,7 +30,11 @@
     --border-color: rgba(255, 255, 255, 0.1);
     --text-color: rgb(116, 112, 131);
     --highlight-color: rgb(255, 255, 255);
-}
+    :root {
+          overflow-x: hidden;
+        }
+
+  }
 
 body {
     background-color: var(--background-color);
@@ -66,7 +70,7 @@ a:hover {
 .navbar {
     background-color: var(--background-color);
     color: var(--highlight-color);
-    padding: 10px 20px;
+    padding: 10px;
     width: 100%;
     position: fixed;
     top: 0;
