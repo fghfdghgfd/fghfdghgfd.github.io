@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Games</title>
-    <link
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-    crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinf0il | Games</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
@@ -18,82 +18,25 @@
     <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
         :root {
           overflow-x: hidden;
         }
-        :root {
-    --background-color: rgb(5, 10, 24);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --text-color: rgb(116, 112, 131);
-    --highlight-color: rgb(255, 255, 255);
-}
 
-body {
-    background-color: var(--background-color);
-    font-family: 'Space Grotesk', sans-serif;
-    margin: 0px;
-    overflow: hidden;
-}
+        .navbar {
+            position: fixed;
+            bottom: 100;
+            left: 0;
+            right: 0;
+            background-color: #1e1e1e;
+            padding: 10px;
+            z-index: 1000;
+        }
 
-* {
-    box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-a,
-p,
-span {
-    font-weight: 400;
-    color: var(--text-color); /* Applied --text-color variable */
-    margin: 0px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--highlight-color);
-}
-
-/* Navbar styles */
-.navbar {
-    background-color: var(--background-color);
-    color: var(--highlight-color);
-    padding: 10px 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 0px; /* Adjusted gap value */
-}
-
-.nav-link {
-    color: var(--text-color); /* Applied --text-color variable */
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0 10px;
-}
-
-.nav-link:hover {
-    color: var(--highlight-color);
-}
-
-#nav-logo-section>a>img {
-            width: 65px;
-            height: 65px;
+        .navbar-brand {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
         }
         body, html {
     height: 100vh;
@@ -178,28 +121,29 @@ a:hover {
 
   
     </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2865967907877238"
+     crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div id="nav-logo-section" style="margin-right: 10px;">
-            <a href="index.html" class="nav-link">
-                <img src="https://lh6.googleusercontent.com/BNqYwfyWiccyaL72udvMc9NIpFYtuujUqiiOlLx9EsKyIE2w3DpOfrgfKlgejwxS4_HH2ca70WuxUGC6F3shlYCsUcGQefWahGrq8P-iMSzG7sVsGW6GdvpgpFax_XCWvA=w404" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div id="nav-link-section" class="nav-section">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="proxy.html" class="nav-link">Proxy</a>
-            <a href="games.html" class="nav-link">Games</a>
-            <a href="apps.html" class="nav-link">Apps</a>
-            <a href="chat.html" class="nav-link">Chat</a>
-            <a href="settings.html" class="nav-link">Settings</a>
-        </div>
-    </nav>
+ <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="foil.png" alt="our logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse ms-auto navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto" style="gap: 20px; display: flex !important; justify-content: center; align-items: center;">
+        <a style="color: #fff;" class="nav-item nav-link active" href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home <span class="sr-only">(current)</span></a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="proxy.html"><i class="fa-solid fa-window-maximize"></i> Proxy</a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="apps.html"><i class="fa-solid fa-rocket"></i> Apps</a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="chatroom.html"><i class="fa-solid fa-comment-dots"></i> Chatroom</a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a style="color: #fff;" class="nav-item nav-link active" href="about.html"><i class="fa-solid fa-question"></i> About</i></a>
+      </div>
+    </div>
+  </nav> 
   <br><br><br><br><br><h1 style="width: 100vw; font-family: monospace; color: limegreen; font-weight: bold; align-items: center; justify-content: center;">GAMES</h1>
   
 
