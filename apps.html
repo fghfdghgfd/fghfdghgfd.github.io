@@ -237,7 +237,7 @@ a:hover {
       card.classList.add("hvr-bob")
       card.addEventListener("click", () => {
 
-        if (game.id == "customapp") return loadcustomapp() 
+        if (app.id == "customapp") return loadcustomapp() 
         window.location.href = `/load.html?app=${app.id}`
       })
     })
