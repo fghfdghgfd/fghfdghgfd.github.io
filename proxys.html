@@ -240,7 +240,7 @@ a:hover {
       card.classList.add("hvr-bob")
       card.addEventListener("click", () => {
 
-        if (game.id == "customgame") return loadcustomgame() 
+        if (proxy.id == "customgame") return loadcustomgame() 
         window.location.href = `/load.html?proxy=${proxy.id}`
       })
     })
