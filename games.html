@@ -33,7 +33,10 @@
     <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+      :root {
+          overflow: hidden;
+        }
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 /* Existing CSS */
 :root {
     --background-color: rgb(5, 10, 24);
@@ -213,7 +216,7 @@ a:hover {
             <a href="settings.html" class="nav-link">Settings</a>
         </div>
     </nav>
-  <br><br><br><br><br><h1 style="width: 100vw; font-family: monospace; color: limegreen; font-weight: bold; align-items: center; justify-content: center;">GAMES</h1>
+  <br><br><br><br><br><h1 style="width: 100vw; font-family: monospace; color: limegreen; font-weight: bold; align-items: center; justify-content: center;">Games</h1>
   
 
   <div style="width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center;"> 
@@ -230,7 +233,7 @@ a:hover {
   <script src="js/script.js"></script>
   
   <script>
-    games.forEach(game => {
+    game.forEach(game => {
       var card = document.createElement("div")
       var image = document.createElement("img")
       var text = document.createElement("h4")
