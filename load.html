@@ -101,7 +101,7 @@
       });
     } else if (params.get("proxy")) {
       proxys.forEach(proxy => {
-        if (proxy.id != params.get("proxys")) return;
+        if (proxy.id != params.get("proxy")) return;
         const proxyUrl = proxy.url; 
         document.title = `${proxy.title}`;
         document.querySelector("#gameImage").src = proxy.image;
