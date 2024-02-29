@@ -48,9 +48,12 @@
     </div>
   </div>
 
+  <script src="./uv/uv.bundle.js"></script>
+  <script src="./uv/uv.config.js"></script>
   <script src="./data/games.js"></script>
   <script src="./data/apps.js"></script>
   <script src="./data/utils.js"></script>
+  <script src="js/cloak.js"></script>
   <script src="js/script.js"></script>
   
   <script>
@@ -59,53 +62,70 @@
     }
 
     function openFullscreen() {
-      const params = new URLSearchParams(window.location.search);
-      let url;
-      if (params.get("game")) {
-        games.forEach(game => {
-          if (game.id == params.get("game")) {
-            url = game.url;
-          }
-        });
-      } else if (params.get("app")) {
-        apps.forEach(app => {
-          if (app.id == params.get("app")) {
-            url = app.url;
-          }
-        });
-      } else if (params.get("util")) {
-        utils.forEach(util => {
-          if (util.id == params.get("util")) {
-            url = util.url;
-          }
-        });
-      }
-      
-      if (url) {
-        const win = window.open('about:blank', '_blank');
-        win.document.body.style.margin = "0";
-        win.document.body.style.height = "100vh";
-        const iframe = win.document.createElement("iframe");
-        iframe.style.border = "none";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.margin = "0";
-        iframe.referrerPolicy = "no-referrer";
-        iframe.allow = "fullscreen";
-        iframe.src = url;
-        win.document.body.appendChild(iframe);
-      }
+      const url = document.querySelector("#frame").src;
+      const win = window.open('about:blank', '_blank');
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      var iframe = win.document.createElement("iframe");
+      iframe.style.border = "none";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.margin = "0";
+      iframe.referrerpolicy = "no-referrer";
+      iframe.allow = "fullscreen";
+      iframe.src = url;
+      win.document.body.appendChild(iframe);
     }
 
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("game")) {
+      games.forEach(game => {
+        if (game.id != params.get("game")) return;
+        const gameUrl = game.url; 
+        document.title = `${game.title} | Tinf0il`;
+        document.querySelector("#gameImage").src = game.image;
+        document.querySelector("#gameTitle").innerHTML = game.title;
+        if (game.description) document.querySelector("#gameDescription").innerHTML = game.description;
+        document.querySelector("#frame").src = gameUrl;
+      });
+    } else if (params.get("app")) {
+      apps.forEach(app => {
+        if (app.id != params.get("app")) return;
+        const appUrl = app.url; 
+        document.title = `${app.title} | Tinf0il`;
+        document.querySelector("#gameImage").src = app.image;
+        document.querySelector("#gameTitle").innerHTML = app.title;
+        if (app.description) document.querySelector("#gameDescription").innerHTML = app.description;
+        document.querySelector("#frame").src = appUrl;
+      });
+    } else if (params.get("util")) {
+      utils.forEach(util => {
+        if (util.id != params.get("utils")) return;
+        const utilUrl = util.url;
+        document.title = `${util.title} | Tinf0il`;
+        document.querySelector("#gameTitle").innerHTML = util.title;
+        if (util.description) document.querySelector("#gameDescription").innerHTML = util.description;
+        document.querySelector("#frame").src = utilUrl;
+      });
+    }
+    
     window.onbeforeunload = (event) => {
       event.preventDefault();
       return '';
     }
   </script>
+  
+  <!-- stats - count particles -->
+  <div class="count-particles">
+    <span class="js-count-particles"></span>
+  </div>
 
-  <!-- particles.js -->
+  <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->    
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   <script>
+    /* ---- particles.js config ---- */
+
     particlesJS("particles-js", {
       "particles": {
         "number": {
@@ -176,7 +196,7 @@
         }
       },
       "interactivity": {
-        "detect_on": "window",
+        "detect_on": "window", // weuben was an idiot here :>
         "events": {
           "onhover": {
             "enable": true,
@@ -216,6 +236,27 @@
       },
       "retina_detect": true
     });
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
   </script>
+
 </body>
 </html>
