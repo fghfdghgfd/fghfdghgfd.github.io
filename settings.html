@@ -255,6 +255,7 @@ a:hover {
         <br>
         <br>
         <button class="button button1" id="save-button">Save Settings</button>
+        <button onclick="blank()">Open in about:blank</button>
     
       <script>
         const sections = document.querySelectorAll('.section');
@@ -366,6 +367,21 @@ a:hover {
         function openCompactChecker() {
           window.location.href = "/settings/compat/";
         }
+        if (window.parent.window.location.href == "about:blank") document.getElementById("blankbtn").remove()
+
+function blank() {
+  const tab = window.open('about:blank', '_blank');
+  const iframe = tab.document.createElement('iframe');
+  const stl = iframe.style;
+  stl.border = stl.outline = 'none';
+  stl.width = '100vw';
+  stl.height = '100vh';
+  stl.position = 'fixed';
+  stl.left = stl.right = stl.top = stl.bottom = '0';
+  iframe.src = self.location;
+  tab.document.body.appendChild(iframe);
+  //window.parent.window.location.replace('https://classroom.google.com')
+}
       </script>
 
 </body>
