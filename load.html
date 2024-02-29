@@ -82,7 +82,7 @@
       games.forEach(game => {
         if (game.id != params.get("game")) return;
         const gameUrl = game.url; 
-        document.title = `${game.title} | Tinf0il`;
+        document.title = `${game.title `;
         document.querySelector("#gameImage").src = game.image;
         document.querySelector("#gameTitle").innerHTML = game.title;
         if (game.description) document.querySelector("#gameDescription").innerHTML = game.description;
@@ -92,17 +92,27 @@
       apps.forEach(app => {
         if (app.id != params.get("app")) return;
         const appUrl = app.url; 
-        document.title = `${app.title} | Tinf0il`;
+        document.title = `${app.title}`;
         document.querySelector("#gameImage").src = app.image;
         document.querySelector("#gameTitle").innerHTML = app.title;
         if (app.description) document.querySelector("#gameDescription").innerHTML = app.description;
         document.querySelector("#frame").src = appUrl;
       });
+    } else if (params.get("proxy")) {
+      proxys.forEach(proxy => {
+        if (proxy.id != params.get("proxy")) return;
+        const proxyUrl = proxy.url; 
+        document.title = `${proxy.title}`;
+        document.querySelector("#gameImage").src = proxy.image;
+        document.querySelector("#gameTitle").innerHTML = proxy.title;
+        if (proxy.description) document.querySelector("#gameDescription").innerHTML = proxy.description;
+        document.querySelector("#frame").src = proxyUrl;
+      });
     } else if (params.get("util")) {
       utils.forEach(util => {
         if (util.id != params.get("utils")) return;
         const utilUrl = util.url;
-        document.title = `${util.title} | Tinf0il`;
+        document.title = `${util.title}`;
         document.querySelector("#gameTitle").innerHTML = util.title;
         if (util.description) document.querySelector("#gameDescription").innerHTML = util.description;
         document.querySelector("#frame").src = utilUrl;
