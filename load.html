@@ -28,108 +28,52 @@
         
         <div id="menubtns">
             <button onclick="history.back()"><i class="fa-solid fa-house"></i></button>
-            <button onclick="fullscreen()"><i class="fa-solid fa-expand"></i></button>
+            <button onclick="openFullscreen()"><i class="fa-solid fa-expand"></i></button>
         </div>
     </div>
   </div>
 
-  <script src="./uv/uv.bundle.js"></script>
-  <script src="./uv/uv.config.js"></script>
   <script src="./data/games.js"></script>
   <script src="./data/apps.js"></script>
   <script src="./data/utils.js"></script>
-  <script src="js/cloak.js"></script>
-  <script src="js/script.js"></script>
-  
   <script>
-    if (window.parent.window.location == "about:blank") {
-        window.location.href = `/fullscreen.html${window.location.search}`
+    function openFullscreen() {
+      const url = document.querySelector("#frame").src;
+      window.open(url, '_blank');
     }
 
-    function fullscreen() {
-      const tab = window.open('about:blank', '_blank');
-      const iframe = tab.document.createElement('iframe');
-      const stl = iframe.style;
-      stl.border = stl.outline = 'none';
-      stl.width = '100vw';
-      stl.height = '100vh';
-      stl.position = 'fixed';
-      stl.left = stl.right = stl.top = stl.bottom = '0';
-      iframe.src = self.location;
-      tab.document.body.appendChild(iframe);
-    }
-
-    const params = new URLSearchParams(window.location.search)
+    const params = new URLSearchParams(window.location.search);
     if (params.get("game")) {
       games.forEach(game => {
         if (game.id != params.get("game")) return;
-        const gameUrl = game.url; 
         document.title = `${game.title} | Tinf0il`;
         document.querySelector("#gameImage").src = game.image;
         document.querySelector("#gameTitle").innerHTML = game.title;
         if (game.description) document.querySelector("#gameDescription").innerHTML = game.description;
-        navigator.serviceWorker.register('./loadsw.js', {
-          scope: __uv$config.prefix
-        }).then(() => {
-          document.querySelector("#frame").src = gameUrl;
-        });
+        document.querySelector("#frame").src = game.url;
       });
     } else if (params.get("app")) {
       apps.forEach(app => {
         if (app.id != params.get("app")) return;
-        const appUrl = app.url; 
         document.title = `${app.title} | Tinf0il`;
         document.querySelector("#gameImage").src = app.image;
         document.querySelector("#gameTitle").innerHTML = app.title;
         if (app.description) document.querySelector("#gameDescription").innerHTML = app.description;
-        navigator.serviceWorker.register('./loadsw.js', {
-          scope: __uv$config.prefix
-        }).then(() => {
-          document.querySelector("#frame").src = appUrl;
-          if (app.fullscreen) document.querySelector("#footer").style.display = "none";
-        });
+        document.querySelector("#frame").src = app.url;
       });
     } else if (params.get("util")) {
       utils.forEach(util => {
         if (util.id != params.get("utils")) return;
-        const utilUrl = util.url;
         document.title = `${util.title} | Tinf0il`;
         document.querySelector("#gameTitle").innerHTML = util.title;
         if (util.description) document.querySelector("#gameDescription").innerHTML = util.description;
-        navigator.serviceWorker.register('./loadsw.js', {
-          scope: __uv$config.prefix
-        }).then(() => {
-          document.querySelector("#frame").src = utilUrl;
-        });
+        document.querySelector("#frame").src = util.url;
       });
-    }
-    
-    window.onbeforeunload = (event) => {
-      event.preventDefault();
-      return '';
     }
   </script>
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQDVFNNVD6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-YQDVFNNVD6');
-  </script>
-
-  <!-- stats - count particles -->
-  <div class="count-particles">
-    <span class="js-count-particles"></span>
-  </div>
-
   <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->    
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   <script>
     /* ---- particles.js config ---- */
 
@@ -243,26 +187,6 @@
       },
       "retina_detect": true
     });
-
-    /* ---- stats.js config ---- */
-
-    var count_particles, stats, update;
-    stats = new Stats;
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector('.js-count-particles');
-    update = function() {
-      stats.begin();
-      stats.end();
-      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-      }
-      requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
   </script>
 
 </body>
