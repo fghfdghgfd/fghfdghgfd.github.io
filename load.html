@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="settings.js" defer></script>
-  <!-- Posthog-->
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_pm81y7KNu1904rnTdFuACZton2NsuS5J1NWBJ1MLOcM',{api_host:'/sf'})
-</script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2K6NBJ2Z24"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2K6NBJ2Z24');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undervolt</title>
@@ -89,16 +74,6 @@
         if (game.description) document.querySelector("#gameDescription").innerHTML = game.description;
         document.querySelector("#frame").src = gameUrl;
       });
-    } else if (params.get("proxy")) {
-      proxys.forEach(proxy => {
-        if (proxy.id != params.get("proxy")) return;
-        const proxyUrl = proxy.url; 
-        document.title = `${proxy.title}`;
-        document.querySelector("#gameImage").src = proxy.image;
-        document.querySelector("#gameTitle").innerHTML = proxy.title;
-        if (proxy.description) document.querySelector("#gameDescription").innerHTML = proxy.description;
-        document.querySelector("#frame").src = proxyUrl;
-      });
     } else if (params.get("app")) {
       apps.forEach(app => {
         if (app.id != params.get("app")) return;
@@ -108,6 +83,16 @@
         document.querySelector("#gameTitle").innerHTML = app.title;
         if (app.description) document.querySelector("#gameDescription").innerHTML = app.description;
         document.querySelector("#frame").src = appUrl;
+      });
+    } else if (params.get("proxy")) {
+      proxy.forEach(proxy => {
+        if (proxy.id != params.get("proxy")) return;
+        const proxyUrl = proxy.url; 
+        document.title = `${proxy.title}`;
+        document.querySelector("#gameImage").src = proxy.image;
+        document.querySelector("#gameTitle").innerHTML = proxy.title;
+        if (proxy.description) document.querySelector("#gameDescription").innerHTML = proxy.description;
+        document.querySelector("#frame").src = proxyUrl;
       });
     } else if (params.get("util")) {
       utils.forEach(util => {
@@ -207,7 +192,7 @@
         }
       },
       "interactivity": {
-        "detect_on": "window", // weuben was an idiot here :>
+        "detect_on": "window",
         "events": {
           "onhover": {
             "enable": true,
@@ -271,4 +256,3 @@
 
 </body>
 </html>
-
