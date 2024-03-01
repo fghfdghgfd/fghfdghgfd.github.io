@@ -105,7 +105,7 @@ var proxys = [
     "image": "https://cdn.pixabay.com/photo/2021/12/10/16/38/twitch-6860918_1280.png",
   },
 ]
-  
+
   var customproxys = JSON.parse(localStorage.getItem("customproxys"))
   customproxys.forEach(proxy => {
     proxys.push(proxy)
