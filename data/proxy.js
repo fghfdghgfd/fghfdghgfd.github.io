@@ -1,5 +1,4 @@
 var proxys = [
-
   {
     'id': 'roblox',
     'title': "Roblox",
