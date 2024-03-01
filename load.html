@@ -51,9 +51,9 @@
   <script src="./uv/uv.bundle.js"></script>
   <script src="./uv/uv.config.js"></script>
   <script src="./data/games.js"></script>
+  <script src="./data/proxy.js"></script>
   <script src="./data/apps.js"></script>
   <script src="./data/utils.js"></script>
-  <script src="./data/proxy.js"></script>
   <script src="js/cloak.js"></script>
   <script src="js/script.js"></script>
   
@@ -89,6 +89,16 @@
         if (game.description) document.querySelector("#gameDescription").innerHTML = game.description;
         document.querySelector("#frame").src = gameUrl;
       });
+    } else if (params.get("proxy")) {
+      proxys.forEach(proxy => {
+        if (proxy.id != params.get("proxy")) return;
+        const proxyUrl = proxy.url; 
+        document.title = `${proxy.title}`;
+        document.querySelector("#gameImage").src = proxy.image;
+        document.querySelector("#gameTitle").innerHTML = proxy.title;
+        if (proxy.description) document.querySelector("#gameDescription").innerHTML = proxy.description;
+        document.querySelector("#frame").src = proxyUrl;
+      });
     } else if (params.get("app")) {
       apps.forEach(app => {
         if (app.id != params.get("app")) return;
@@ -107,16 +117,6 @@
         document.querySelector("#gameTitle").innerHTML = util.title;
         if (util.description) document.querySelector("#gameDescription").innerHTML = util.description;
         document.querySelector("#frame").src = utilUrl;
-      });
-    } else if (params.get("proxy")) {
-      proxys.forEach(proxy => {
-        if (proxy.id != params.get("proxy")) return;
-        const proxyUrl = proxy.url; 
-        document.title = `${proxy.title}`;
-        document.querySelector("#gameImage").src = proxy.image;
-        document.querySelector("#gameTitle").innerHTML = proxy.title;
-        if (proxy.description) document.querySelector("#gameDescription").innerHTML = proxy.description;
-        document.querySelector("#frame").src = proxyUrl;
       });
     }
     
