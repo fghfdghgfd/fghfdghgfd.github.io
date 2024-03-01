@@ -331,5 +331,5 @@ var proxy = [
     proxy.push(proxy)
   })
   
-  console.log("Loaded " + apps.length + " proxy")
+  console.log("Loaded " + proxy.length + " proxy")
   console.log("Loaded " + customproxy.lenfth + " custom proxy")
