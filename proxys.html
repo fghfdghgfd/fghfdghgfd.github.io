@@ -233,7 +233,7 @@ a:hover {
   <script src="js/script.js"></script>
   
   <script>
-    proxys.forEach(proxy => {
+    proxy.forEach(proxy => {
       var card = document.createElement("div")
       var image = document.createElement("img")
       var text = document.createElement("h4")
@@ -255,7 +255,7 @@ a:hover {
       card.classList.add("hvr-bob")
       card.addEventListener("click", () => {
 
-        if (proxy.id == "customproxy") return loadcustomproxy() 
+        if (proxy.id == "customproxy") return loadcustomgame() 
         window.location.href = `/load.html?proxy=${proxy.id}`
       })
     })
