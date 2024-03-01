@@ -326,10 +326,10 @@ var proxy = [
     },
   ]
   
-  var customproxy = JSON.parse(localStorage.getItem("customproxy"))
-  customproxy.forEach(proxy => {
-    proxy.push(proxy)
+  var customproxys = JSON.parse(localStorage.getItem("customproxys"))
+  customproxys.forEach(proxy => {
+    proxys.push(proxy)
   })
   
-  console.log("Loaded " + apps.length + " proxy")
-  console.log("Loaded " + customproxy.lenfth + " custom proxy")
+  console.log("Loaded " + proxys.length + " proxy")
+  console.log("Loaded " + customproxys.lenfth + " custom proxys")
