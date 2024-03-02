@@ -331,5 +331,5 @@ customproxys.forEach(proxy => {
   proxys.push(proxy)
 })
 
-console.log("Loaded " + proxys.length + " proxy")
+console.log("Loaded " + proxys.length + " proxys")
 console.log("Loaded " + customproxys.lenfth + " custom proxys")
