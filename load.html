@@ -85,7 +85,7 @@
         document.querySelector("#frame").src = appUrl;
       });
     } else if (params.get("proxy")) {
-      proxy.forEach(proxy => {
+      proxys.forEach(proxy => {
         if (proxy.id != params.get("proxy")) return;
         const proxyUrl = proxy.url; 
         document.title = `${proxy.title}`;
