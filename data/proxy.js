@@ -35,6 +35,12 @@ var proxys = [
     'url': 'https://calllmemaybe.cddo.cc/',
     'image': 'https://lh5.googleusercontent.com/gm0szIkffTKlm4uFFDTXu3-TYdsEAAdECiWa2ImXoB9LUQ0Je-neDNLylbkaMHru4HYO9vfLF2k1Ri5rXDYM6uCeXR75UU--jNwT8mApcR-Zm4wyVOqGt3jYE7Tj5PzC8A=w1080'
   },
+  {
+    'id': 'math-orbit',
+    'title': "Math Orbit",
+    'url': 'https://letslearn-math.xyz/',
+    'image': 'https://lh7-us.googleusercontent.com/B2Cu7Dj5A5ZvkN5MaE7scNIqSf4lK1_UgZkLCGpFZD07a7LCyYFJO5M_c6qVhMKkUy5W-1O8-q1bKg1wu4fbTtidIr6cRiYw0fGaNH4xhGs7zFYRkW2_v3o1YK-hxGfB_SDQxiwXmhTqZLoh80eBTZFS4U9nfw'
+  },
 ]
 
 var customproxys = JSON.parse(localStorage.getItem("customproxys"))
