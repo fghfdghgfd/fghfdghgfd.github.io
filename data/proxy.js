@@ -29,6 +29,12 @@ var proxys = [
     'url': 'https://polarislearning.org/',
     'image': 'https://lh3.googleusercontent.com/RVG7kTQx1zfk8GPdNK43BsD2HkdQ0n_A4dqMbksiaCR50f9A_S_0ZLZJ9qqhZKT2JJkTJD1zHPCRVvKY4h1N63kfPViDt_34Lhlq1oBpPt4sSibL_Ml0cMHZYqn5lECjhw=w2560'
   },
+  {
+    'id': 'emerald',
+    'title': "Emerald",
+    'url': 'https://calllmemaybe.cddo.cc/',
+    'image': 'https://lh5.googleusercontent.com/gm0szIkffTKlm4uFFDTXu3-TYdsEAAdECiWa2ImXoB9LUQ0Je-neDNLylbkaMHru4HYO9vfLF2k1Ri5rXDYM6uCeXR75UU--jNwT8mApcR-Zm4wyVOqGt3jYE7Tj5PzC8A=w1080'
+  },
 ]
 
 var customproxys = JSON.parse(localStorage.getItem("customproxys"))
