@@ -1,4 +1,4 @@
-var proxys = [
+var proxy = [
   {
     'id': 'idlebreakout',
     'title': 'Idle Breakout',
