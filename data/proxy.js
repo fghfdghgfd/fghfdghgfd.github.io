@@ -17,6 +17,12 @@ var proxys = [
     'url': 'https://nowgg.nl/play/roblox-corporation/5349/roblox',
     'image': 'https://lh5.googleusercontent.com/_wi0jWOc5DvPGWw8CmAm4qANRzeuUUpSXxR_bcRzmIRJ9MnCK8NctjyGkDcoeYhEK7GAIRmuozSmRJZWcj8jKsXHhdsPva_MBeKJOlbv9H2HBUL5W25Q2MxISWoRswgmcw=w1080'
   },
+  {
+    'id': 'tiw',
+    'title': "TIW",
+    'url': 'https://starttiw.org/',
+    'image': 'https://lh5.googleusercontent.com/GhbtVxVUUQe__NZPQmyYWPUPmzHovWeiNx8Veb_RJ2tbmcxLPMizIPW8OnYqIkSc7a7YK9GSfKhhoQuG7Y_lm2apt5bLhxR6dgvQm4I6z_No7sjPL8WYm6guz4hXt49CSw=w500'
+  },
 ]
 
 var customproxys = JSON.parse(localStorage.getItem("customproxys"))
