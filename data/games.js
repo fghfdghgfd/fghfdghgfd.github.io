@@ -201,7 +201,7 @@ var games = [
   {
     "id": '1v1lol',
     'title': "1v1.lol",
-    'url': 'https://docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/to@1e8a949f89fcf2b110640c41a0705db01405d161/d7uf4.xml#',
+    'url': 'https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@57aba9c568b75b8aaddbcad0a05f8c26f57b344b/package/1v1old.xml',
     'image': 'https://play-lh.googleusercontent.com/-dE43Bqni_bUnq0L-piPxiJG4YiCotk5khMdrQaQBJrXJ3vSgjNeIaKyA34rBvKQSyOy'
   },
   {
