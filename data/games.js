@@ -101,7 +101,7 @@ var games = [
   },
   {
     'id': 'retrobowl',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/retro-bowl/index.html',
+    'url': 'https://agamyacapital.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html',
     'title': 'Retro Bowl',
     'image': 'https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ'
   },
@@ -201,7 +201,12 @@ var games = [
   {
     "id": '1v1lol',
     'title': "1v1.lol",
-    'url': 'https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@57aba9c568b75b8aaddbcad0a05f8c26f57b344b/package/1v1old.xml',
+    'url': '<Module>
+    <ModulePrefs title="1v1-old"/>
+    <Content type="html">
+    <![CDATA[ <html> <head> <meta charset="utf-8"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/style.css"> <script src="https://cdn.jsdelivr.net/gh/greggman/webgl-helpers@06e3d45373af0f3ce8f58b472b61835d9678d23a/examples/unity/TemplateData/UnityProgress.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/UnityLoader.js"></script> <script> var gameInstance = UnityLoader.instantiate("gameContainer", "https://justbuild.nyc3.cdn.digitaloceanspaces.com/CI/1v1/Prod/162/WebGL.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}}); </script> </head> <body> <div class="webgl-content"> <div id="gameContainer" style="width: 100%; height: 100%; margin: auto;"></div> </div> <!-- Firebase App (the core Firebase SDK) is always required and must be listed first --> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase-app.js"></script> <!-- Add Firebase products that you want to use --> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase-auth.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase-firestore.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase-remote-config.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/login.js"></script> <script src="https://cdn.jsdelivr.net/gh/rmsunblck/yexex@67752124403617aeed6cdd4588c41f19884c2585/lol/firebase-config.js"></script> <script> initializeFireBase(); initRemoteConfig(); window.unityInstance = gameInstance; function showAds() { console.log("show ads"); } function requestNewAd(){ // Show video ad unityAdFinishedCallback(); } function unityAdFinishedCallback(){ try{ if(gameInstance) gameInstance.SendMessage('MainMenuManagers', 'OnWebCallback'); } catch(error){ console.log(error); } } function onUnityReady() { sendConfig(); } </script> <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script> </body> </html> ]]>
+    </Content>
+    </Module>',
     'image': 'https://play-lh.googleusercontent.com/-dE43Bqni_bUnq0L-piPxiJG4YiCotk5khMdrQaQBJrXJ3vSgjNeIaKyA34rBvKQSyOy'
   },
   {
