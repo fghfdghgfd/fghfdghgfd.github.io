@@ -1,5 +1,17 @@
 var games = [
   {
+    "id": '1v1lol',
+    'title': "1v1.lol",
+    'url': 'https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@57aba9c568b75b8aaddbcad0a05f8c26f57b344b/package/1v1old.xml',
+    'image': 'https://play-lh.googleusercontent.com/-dE43Bqni_bUnq0L-piPxiJG4YiCotk5khMdrQaQBJrXJ3vSgjNeIaKyA34rBvKQSyOy'
+  },
+  {
+    'id': 'gunspin',
+    'title': 'Gun Spin',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/RobiFet/workflow@60b41ef8c9123ae41b86bf04c9b39e1a5713aaa9/bin/gs.xml&container=ig',
+    'image': 'https://play-lh.googleusercontent.com/fLqvWSVq5rENEvu32xl0hf96wwSHVwQm-_9xc6KZg9Vgv9PbAtf1CyBYW7i1mlAXoSA=w240-h480-rw'
+  },
+  {
     'id': 'idlebreakout',
     'title': 'Idle Breakout',
     'url': 'https://glitchyeet.github.io/IdleBreakout/',
@@ -197,12 +209,6 @@ var games = [
     'title': 'Slope',
     'url': 'https://mathadventure1.github.io/slope/slope/index.html',
     'image': 'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs'
-  },
-  {
-    "id": '1v1lol',
-    'title': "1v1.lol",
-    'url': 'https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@57aba9c568b75b8aaddbcad0a05f8c26f57b344b/package/1v1old.xml',
-    'image': 'https://play-lh.googleusercontent.com/-dE43Bqni_bUnq0L-piPxiJG4YiCotk5khMdrQaQBJrXJ3vSgjNeIaKyA34rBvKQSyOy'
   },
   {
     'id': 'crossyroad',
