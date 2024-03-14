@@ -108,7 +108,7 @@ var games = [
   {
     'id': 'ducklife4',
     'title': 'Duck Life 4',
-    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fduck-life-4.xml',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fduck-life-4.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/AUGkRrKMtUCLVE9vCvlfMY9Ny9EBqzx17yejVtEEhvpkw-H6lJlvBHgCMqPJm8HV_tM'
   },
   {
@@ -140,7 +140,7 @@ var games = [
     'id': 'justfall',
     'title': 'Just Fall',
     'description': 'Just Fall is a game similar to Fall Guys, where you compete in minigames to be the sole winner',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/just-fall/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/ReactCasts@a4e6ea73f9e1f60e36fc52c2e092d15dd707d7a0/dropdown/src/justfall.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/-0rSllZ8as88Jcs3iZ7-JCFyTb3YLB-HjR7bY7P6q_2MAswmDH4h1qNPfFiaZqzkkg'
   },
   {
@@ -152,7 +152,7 @@ var games = [
   {
     'id': 'snowball',
     'title': 'snowball.io',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/e3144855e924629d8f7c41238660a823a5336705/snowbattle/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/gertdoro/SQLite4Unity3d@8516fc0bd1d2be662ca484f5dc506268b24763ef/Example/Assets/snowball.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/X8FEOENa_t5mlRllBh2RRLc6sMnPIq56Wxa2ndValDOmwzIRhAv7MG6fT97TLQ2DK48'
   },
   {
@@ -207,7 +207,7 @@ var games = [
   {
     'id': 'slope',
     'title': 'Slope',
-    'url': 'https://mathadventure1.github.io/slope/slope/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/WebStarterkit@27197d685502953065e3a3259b6e34f5acb94e65/src/sp1.5.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs'
   },
   {
@@ -225,7 +225,7 @@ var games = [
   {
     'id': 'geometrydash',
     'title': 'Geometry Dash',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/geodash/index.html',
+    'url': 'https://scratch.mit.edu/projects/105500895/embed',
     'image': 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRIliRz-2X9ysEbRTRCr_Ujhl5nCiHgKKW6XjGMMqPvIlksny89'
   },
   {
@@ -261,7 +261,7 @@ var games = [
   {
     'id': 'cookieclicker',
     'title': 'Cookie Clicker',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/21ac7257444af1713884b35045938d57e88a4993/cookie-clicker/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/OssE3ON9WsLZedOF39UCgtIHcRYfV0OqQS9O78LfmRdxSyKdHX52G2OFa0LkG6D-k9w'
   },
   {
@@ -273,7 +273,7 @@ var games = [
   {
     'id': 'basketballstars',
     'title': 'Basketball Stars',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/d1a97cbddcf69b15adf2ab4a491df717ecf22938/basketball-stars/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@c0c9f32fd575688ff4b14309e9acf19b73f15e2a/build/bs/bs.xml&container=ig',
     'image': 'https://play-lh.googleusercontent.com/EjJV6kCXgX9EIhKEtpYhQF8-BUb5En8sDKpOPiWSQJUxv9_RAfl4tMxyIMkQYgeqC6I=w240-h480-rw'
   },
   {
@@ -291,7 +291,7 @@ var games = [
   {
     'id': 'bitlife',
     'title': 'Bitlife',
-    'url': 'https://rawcdn.githack.com/3kh0/3kh0-Assets/d1a97cbddcf69b15adf2ab4a491df717ecf22938/bitlife/index.html',
+    'url': 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/awesome-aws@37c682c65a5a4c1ddc5b5ff2b840924526f209b4/scripts/blf.xml&container=ig',
     'image': 'https://d.newsweek.com/en/full/1317374/bitlife-ribbons-how-get-all-complete-list-android-ios-cheats-guide-tips-become.jpg?w=1600&h=1600&q=88&f=75befc746fb83a0c568c44ca07bc5e64'
   },
   {
@@ -329,6 +329,12 @@ var games = [
     'title': "Roblox",
     'url': 'https://nowgg.nl/play/roblox-corporation/5349/roblox',
     'image': 'https://play-lh.googleusercontent.com/WNWZaxi9RdJKe2GQM3vqXIAkk69mnIl4Cc8EyZcir2SKlVOxeUv9tZGfNTmNaLC717Ht'
+  },
+  {
+    'id': 'flappybird',
+    'title': "Flappy Bird",
+    'url': 'https://nebezb.com/floppybird/',
+    'image': 'https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png?20201216002316'
   },
 ]
 
